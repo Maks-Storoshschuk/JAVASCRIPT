@@ -139,24 +139,26 @@ let citiesWithId = [
 for (let user of usersWithId){
   for(let citi of citiesWithId){
     if( citi.user_id===user.id){
-      console.log(citi,user)
+      let dsvoihsihv=[citi,user]
+      console.log(dsvoihsihv)
     }
   }
 }
-// З'єднати в один об'єктdsvoihsihv користувача та місто з відповідними "id" та "user_id" .
+// З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
 //   Записати цей об'єкт в новий масив
 // Example:
   let usersWithCities = [
-    {
-      id: 1, // <===
-      name: 'vasya',
-      age: 31,
-      status: false,
-      address: {
-        user_id: 1, // <===
-        country: 'Ukraine',
-        city: 'Ternopil'
-      }
-    }]
+  {
+    id: 1, // <===
+    name: 'vasya',
+    age: 31,
+    status: false,
+    address: {
+      user_id: 1, // <===
+      country: 'Ukraine',
+      city: 'Ternopil'
+    }
+  }
+    ]
     // TO BE CONTINUED .....
 //   ]
