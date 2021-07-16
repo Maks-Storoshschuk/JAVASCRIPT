@@ -136,14 +136,18 @@ let citiesWithId = [
   {user_id: 2, country: 'Poland', city: 'Krakow'},
   {user_id: 4, country: 'USA', city: 'Miami'}
 ];
+const newArr =[]
+let ss = 0
 for (let user of usersWithId){
   for(let citi of citiesWithId){
     if( citi.user_id===user.id){
-      let dsvoihsihv=[citi,user]
-      console.log(dsvoihsihv)
+      user.address = citi
+      newArr[ss]=user
+      ss++
     }
   }
 }
+console.log(newArr);
 // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
 //   Записати цей об'єкт в новий масив
 // Example:
