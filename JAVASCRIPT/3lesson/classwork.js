@@ -148,7 +148,7 @@
 // let chisla3= chisla.concat(4,5,6)
 // console.log(chisla3)
 //
-// var myArray = new Array (1,2,3);
+// let myArray = new Array (1,2,3);
 // myArray.unshift(4,5,6);
 // console.log(myArray)
 //
@@ -160,7 +160,7 @@
 // chisla= chisla.slice(0,2)
 // console.log(chisla)
 //
-// var myArray = new Array ("1", "2", "3", "4", "5");
+// let myArray = new Array ("1", "2", "3", "4", "5");
 // myArray.splice(3, 2, "a", "b", "c");
 // console.log(myArray)
 //
@@ -170,6 +170,7 @@
 //         ran.push(Math.round(Math.random()*100))
 //     }
 //     return ran}
+//- Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
 // function double(arr) {
 //    let moass = [];
 //     for (let i = 0; i < arr.length; i++) {
@@ -182,15 +183,18 @@
 // let double1 = double(ran());
 // console.log(double1)
 //
-//
-// function word(arr) {
-//     let words = '';
-//     for (const some of arr) {
-//         words+=some
-//     }
-//     return words
-//
-// }
+//- Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
+// - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
+// - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+// - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+function word(arr) {
+    let words = '';
+    for (const some of arr) {
+        words+=some
+    }
+    return words
+
+}
 function word2(arr) {
     let i = 0
     let word = ''
@@ -198,6 +202,17 @@ function word2(arr) {
     i++}
 return word
 }
+
+//- Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
+function copyFun(arr) {
+    let clearArrr = []
+    for (const arrElement of arr) {
+        clearArrr.push(arrElement)
+    }
+    return clearArrr;
+}
+
 let someArray = ['s', 'd','a','f']
 
 console.log(word2(someArray));
+console.log(copyFun(someArray));
