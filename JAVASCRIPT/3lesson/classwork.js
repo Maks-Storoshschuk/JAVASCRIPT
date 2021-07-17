@@ -73,3 +73,111 @@ function aver (arr2){
 }
 let average = aver([123,234,345])
 console.log(average)
+
+function ran(){
+    let ran=[]
+    for (let i = 0; i < 10; i++) {
+        ran.push(Math.round(Math.random()*100))
+    }
+    return ran
+}
+let rand = ran()
+console.log(rand)
+
+
+let mass = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+
+function keyReturn() {
+	let mas = [];
+	for (const argument of arguments) {
+		for (const argumentElement of argument) {
+			for (const argumentElementElement in argumentElement) {
+				mas.push(argumentElementElement);
+			}
+		}
+	}
+	return mas;
+}
+console.log(keyReturn(mass));
+
+function znach() {
+    let mas = [];
+    for (const argument of arguments) {
+        for (const argumentElement of argument) {
+            for (const argumentElementElement in argumentElement) {
+                mas.push(argumentElement[argumentElementElement]);
+            }
+        }
+    }
+    return mas;
+}
+console.log(znach(mass));
+
+
+let matrix1=[12,23,34,45]
+let matrix2=[23,34,45,56]
+
+function matrix(matrixIndex1 = [], matrixIndex2 =[]){
+    matriXXX=[]
+    for (let i = 0; i < matrixIndex1.length; i++) {
+        matriXXX.push(matrixIndex1[i]+matrixIndex2[i])
+    }
+    return matriXXX;
+}
+console.log(matrix(matrix1,matrix2));
+
+let abetka=['a','b','c'];
+let chisla=[1,2,3];
+
+function zad(zad1=[],zad2=[]){
+    zadacha=[]
+    for (let i = 0; i < zad1.length; i++) {
+        zadacha.push(zad1[i],zad2[i])
+    }
+    return zadacha;
+}
+console.log(zad(abetka,chisla))
+
+rev=chisla.reverse()
+console.log(rev)
+
+
+chisla.reverse()
+
+
+let chisla3= chisla.concat(4,5,6)
+console.log(chisla3)
+
+var myArray = new Array (1,2,3);
+myArray.unshift(4,5,6);
+console.log(myArray)
+
+chisla=[1,2,3,4,5]
+ chisla= chisla.splice(3,2)
+console.log(chisla)
+
+chisla=[1,2,3,4,5]
+chisla= chisla.slice(0,2)
+console.log(chisla)
+
+var myArray = new Array ("1", "2", "3", "4", "5");
+myArray.splice(3, 2, "a", "b", "c");
+console.log(myArray)
+
+function ran(){
+    let ran=[]
+    for (let i = 0; i < 10; i++) {
+        ran.push(Math.round(Math.random()*100))
+    }
+    return ran}
+function double(arr) {
+   let moass = [];
+    for (let i = 0; i < arr.length; i++) {
+       if (!(arr[i]%2)){
+           moass.push(arr[i])
+       }
+    }
+    return moass
+}
+let double1 = double(ran());
+console.log(double1)
