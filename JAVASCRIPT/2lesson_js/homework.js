@@ -137,6 +137,7 @@ let citiesWithId = [
   {user_id: 4, country: 'USA', city: 'Miami'}
 ];
 const newArr =[]
+
 let ss = 0
 for (let user of usersWithId){
   for(let citi of citiesWithId){
