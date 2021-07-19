@@ -1,0 +1,27 @@
+.header{
+  height: 100px;
+  background-color: cornflowerblue;
+}
+.nav{
+  height: 150px;
+  background-color: blue;
+}
+.block2{
+  height: 600px;
+display: flex;
+}
+.main{
+  background-color: #b3d4fc;
+  width: 80%;
+}
+.asside{
+  background-color: aqua;
+  width: 20%;
+}
+.footer{
+  background-color: darkorchid;
+  height: 170px;
+}
+h1 {
+  margin: 0;
+}

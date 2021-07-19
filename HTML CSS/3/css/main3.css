@@ -1,0 +1,19 @@
+.home1{
+  display: flex;
+  background-color: blue;
+}
+.home{
+  border: 10px solid #ffffff;
+  height: 800px;
+  width: 50%;
+}
+.widsm{
+  border: 10px solid #ffffff;
+  background-color: darkblue;
+}`
+.contact{
+  border: 10px solid #ffffff;
+  background-color: blue;
+  height: 600px;
+}
+

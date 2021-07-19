@@ -1,0 +1,24 @@
+.target{
+  height: 600px;
+  border: 10px solid #888888;
+  border-radius: 20px;
+}
+.block{
+  margin: 10px;
+  background-color: #cccccc;
+  height: 200px;
+}
+.twix{
+  display: flex;
+}
+.box{
+  margin: 10px;
+  background-color: #cccccc;
+  width: 70%;
+  height: 350px;
+}
+.warp {
+  margin: 10px;
+  background-color: #cccccc;
+  width: 30%;
+}

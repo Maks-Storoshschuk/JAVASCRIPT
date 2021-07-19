@@ -1,0 +1,155 @@
+.first{
+    height: 200px;
+    width: 100%;
+}
+.gray{
+    background-color: #999999;
+}
+.littl{
+    height: 80px;
+    width: 250px;
+    position: absolute;
+    left:140px;
+    top: 60px;
+    border-radius: 10px;
+}
+.blue{
+    background-color: darkblue;
+}
+.big{
+    height: 550px;
+    width: 100%;
+    text-align: center;
+}
+.violet {
+    color: violet;
+    margin: 0;
+}
+.poz{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 100px;
+
+}
+.val{
+    height: 50px;
+    width: 250px;
+}
+.br{
+    border-radius: 10px;
+    background-color: violet;
+}
+.block{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 320px;
+}
+.block1{
+    height: 200px;
+    width: 250px;
+}
+.second{
+    height: 2500px;
+}
+.block2 {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 320px;
+}
+.block3 {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 420px;
+}
+.text{
+    position: relative;
+    top: 200px;
+    text-align: center;
+    color: #000;
+}
+.block4 {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 500px;
+}
+.block10 {
+    height: 250px;
+    width: 400px;
+}
+.text2 {
+    position: relative;
+    top: 250px;
+    text-align: center;
+    color: #000;
+}
+.text3 {
+    position: relative;
+    top: 300px;
+    text-align: center;
+    color: #000;
+    margin: 0;
+}
+.text4 {
+    position: relative;
+    top: 480px;
+    text-align: center;
+    color: #000;
+}
+.block5 {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 680px;
+}
+.block21{
+    height: 200px;
+    width: 350px;
+}
+.block6 {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 900px;
+}
+.text5 {
+    position: relative;
+    top: 880px;
+    text-align: center;
+}
+.br2 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: violet;
+    justify-content: space-evenly;
+    position: relative;
+    top: 1030px;
+    left: 150px;
+
+}
+.smal{
+    height: 200px;
+}
+.block0{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    background-color:violet;
+}
+.block8{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: -110px;
+}
+.fintext{
+    position: relative;
+    bottom: -150px;
+    text-align: center;
+
+}

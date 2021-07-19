@@ -1,0 +1,78 @@
+.header{
+  background-color: #b3d4fc;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  border: 10px solid #ffffff;
+}
+.block1{
+  display: block;
+  width: 40%;
+}
+.block2{
+  display: block;
+  width: 60%;
+}
+.flex{
+  display: flex;
+}
+.hero{
+  color: white;
+  text-align: center;
+  border: 10px solid #ffffff;
+  background-color: violet;
+  height: 400px;
+}
+.mine {
+  color: white;
+  text-align: center;
+  border: 10px solid #ffffff;
+  background-color: yellow;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar {
+  color: white;
+  text-align: center;
+  border: 10px solid #ffffff;
+  background-color: yellowgreen;
+  height: 500px;
+}
+.xcont {
+  color: white;
+  border: 10px solid #ffffff;
+  background-color: gray;
+  height: 300px;
+}
+.related{
+  display: flex;
+  height: 250px;
+}
+.images{
+  color: white;
+  text-align: center;
+  border: 10px solid #ffffff;
+  background-color: green;
+  width: 70%;
+}
+.posts {
+  color: white;
+  text-align: center;
+  border: 10px solid #ffffff;
+  background-color: pink;
+  width: 30%;
+}
+.footer{
+  color: white;
+  text-align: center;
+  border: 10px solid #ffffff;
+  background-color: orange;
+}
+.h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

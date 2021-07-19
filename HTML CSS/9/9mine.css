@@ -1,0 +1,156 @@
+.up{
+    height: 2100px;
+    width: 1500px;
+    background-color: #cccccc;
+}
+.down{
+    height: 300px;
+    width: 1500px;
+}
+.color{
+    background-color: darkslateblue;
+}
+.find {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+}
+.text {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: 100px;
+    top: 40px;
+}
+.redt{
+    color: lightcoral;
+    margin-right: 80px;
+    font-size: 24px;
+}
+.text1{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: 100px;
+    top: 80px;
+
+}
+.red{
+    background-color: lightcoral;
+}
+.block_line{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 150px;
+}
+.block1{
+    height: 400px;
+    width: 450px;
+}
+.black{
+    background-color: black;
+    border-radius: 10px;
+    height: 250px;
+    width: 350px;
+    position: relative;
+    top: 250px;
+    margin-bottom: 20px;
+    left: 80px;
+}
+li {
+    list-style-type: none;
+}
+.kvadrat{
+    border-radius: 10px;
+    height: 140px;
+    width: 140px;
+}
+body > div.up > div:nth-child(5) > div:nth-child(2) > ul > li{
+    display: flex;
+    position: relative;
+    margin-left: 600px;
+    margin-bottom: 20px;
+    top: -560px;
+}
+body > div.up > div:nth-child(5) > div:nth-child(2) > ul > li > p{
+   position: relative;
+    left: 40px;
+}
+.litl{
+    height: 40px;
+    width: 40px;
+    border-radius: 2px;
+    margin: 6px;
+}
+.roll{
+    display: flex;
+    justify-content: left;
+    position: relative;
+    top: -550px;
+    margin-left: 170px;
+}
+body > div.up > p{
+    position: relative;
+    top: -500px;
+    text-align: center;
+    font-size: 30px;
+}
+.cola{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -480px;
+}
+.krug{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+body > div.up > div.cola > div:nth-child(1n) > p{
+    position: relative;
+    text-align: center;
+    top: 200px;
+}
+.quad{
+    display: flex;
+    justify-content: left;
+    position: relative;
+    top: 50px;
+    margin-left: 100px;
+}
+.text2 {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin-left: 100px;
+    top: 165px;
+}
+.text4{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -60px;
+    margin-left: 500px;
+}
+body > div.down.color > div.text4 > div:nth-child(1n){
+    margin-right: 60px;
+    color: lightcoral;
+    font-size: 24px;
+}
+body > div.up > div.block_line > div:nth-child(2){
+    text-align: center;
+}
+body > div.up > div.block_line > div:nth-child(2) > div{
+    position: relative;
+    top: 150px;
+}
+body > div.up > div:nth-child(5) > div:nth-child(1) > ul > li:nth-child(1) > div > h2{
+    position: relative;
+    bottom: 40px;
+}
+body > div.up > div:nth-child(5) > div:nth-child(2) > ul > li:nth-child(1) > div > h2{
+    position: relative;
+    bottom:60px;
+    width: 500px;
+}
