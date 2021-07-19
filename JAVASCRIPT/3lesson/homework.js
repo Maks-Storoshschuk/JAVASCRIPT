@@ -19,20 +19,19 @@ console.log(cilinder(10,20))
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше
 // (Math використовувати заборонено); ????????????????
 function arr(array){
-    let arr = array[0]
+    let maximum = array[0]
     for (let maxItem of array){
         if (maxItem > arr) arr = maxItem;
-
     }
-
+    let minimum = array[0]
     for (let minItem of array){
         if (minItem < arr) arr = minItem;
     }
-    return arr;
+    // console.log(minMas);
+    return minimum;
 }
 let maxMas = arr([123,234,456,567,678]);
-console.log(maxMas)
-
+console.log(maxMas);
 // - створити функцію яка  створює блок з текстом. Текст задати через аргумент
 function textCreator(text){
     document.write(`<div>${text}</div>`)
