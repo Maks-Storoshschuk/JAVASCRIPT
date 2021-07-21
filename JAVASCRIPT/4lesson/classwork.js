@@ -82,25 +82,31 @@ class Car2 {
         this.date = date;
         this.top_speed = top_speed;
         this.volume = volume;
-        this.drive = function () {
+    }
+        drive()
+        {
             console.log("їдемо зі швидкістю " + this.top_speed + " км. на годину");
         }
-        this.info = function () {
+        info()
+        {
             console.log(car2)
         }
-        this.incraseMaxSpeed = function (newSpeed) {
-            this.top_speed = this.top_speed+ newSpeed;
+        incraseMaxSpeed(newSpeed)
+        {
+            this.top_speed = this.top_speed + newSpeed;
             console.log(this.top_speed);
         }
-        this.changeYear = function (newValue) {
+        changeYear(newValue)
+        {
             this.date = newValue;
             console.log(this.date);
         }
-        this.driver2 = function (drived) {
+        driver2(drived)
+        {
             this.driver = drived
             console.log(this.driver)
         }
-    }
+
 }
 car2 = new Car2('seven', 'Lada', 2003, 130, 1.6);
 
@@ -117,8 +123,7 @@ car2.incraseMaxSpeed(240)
 car2.changeYear(2010);
 
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
-car2.driver2("Зеник");
-
+car2.driver2("Зеник")
 // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити 10 попелюшок , покласти їх в масив.
 class Dirty {
     constructor(name,age,footSize) {
