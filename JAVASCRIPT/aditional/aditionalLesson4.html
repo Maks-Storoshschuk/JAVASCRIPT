@@ -19,6 +19,7 @@
             this.company = company;
         }
     }
+
     // Конструктор повинен приймати значення для кожної властивості, в т.ч і для властивостей внутрішніх об'єктів
 
     class Address {
@@ -27,18 +28,20 @@
             this.suite = suite;
             this.city = city;
             this.zipcode = zipcode;
-            this.geo =geo;
+            this.geo = geo;
 
         }
     }
+
     class Geo {
         constructor(lat, lng) {
             this.lat = lat;
             this.lng = lng;
         }
     }
-    geo = new Geo('-37.3159','81.1496');
-    address = new Address('Kulas Light','Apt. 556','Gwenborough','92998-3874',geo);
+
+    geo = new Geo('-37.3159', '81.1496');
+    address = new Address('Kulas Light', 'Apt. 556', 'Gwenborough', '92998-3874', geo);
 
     class Company {
         constructor(name, catchPhrase, bs) {
@@ -47,29 +50,94 @@
             this.bs = bs;
         }
     }
-    company = new Company('Romaguera-Crona','Multi-layered client-server neural-net','Multi-layered client-server neural-net');
-    object = new Object('1','Leanne Grahham','Bret','Sincere@april.biz',address,'1-770-736-8031 x56442','1-770-736-8031 x56442',company);
+
+    company = new Company('Romaguera-Crona', 'Multi-layered client-server neural-net', 'Multi-layered client-server neural-net');
+    object = new Object('1', 'Leanne Grahham', 'Bret', 'Sincere@april.biz', address, '1-770-736-8031 x56442', '1-770-736-8031 x56442', company);
     console.log(object)
 
     // -  Створити функцію конструктор / клас  який описує об'єкт тегу
     // Поля :
     //     -назва тегу ()
     // - опис його дій
-    // - масив з атрибутами (2-3 атрибути максимум)
+    class Tag {
+        constructor(name, description, atribut) {
+            this.name = name;
+            this.description = description;
+            this.artribut = atribut;
+        }
+
+        // - масив з атрибутами (2-3 атрибути максимум)
+    }
     // Кожен атрибут описати як окремий який буде містити
     // -назву атрибуту
     // -опис дії атрибуту
     // інформацію брати з htmlbook.ru
     //
+    class Atribut {
+        constructor(nameOfAtribut, discriptionOfAtribut) {
+            this.nameOfAtribut = nameOfAtribut;
+            this.discriptionOfAtribut = discriptionOfAtribut;
+
+        }
+    }
     // Таким чином описати теги
     // -a
+    tag=[
+    new Tag('<a>','Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок. В зависимости ' +
+        'от присутствия атрибутов name или href тег <a> устанавливает ссылку или якорь.',[
+        new Atribut('accesskey','Активация ссылки с помощью комбинации клавиш.'),
+        new Atribut('coords','Устанавливает координаты активной области.'),
+        new Atribut('download','Предлагает скачать указанный по ссылке файл.'),
+    ]),
+
     // -div
+    new Tag('<Div>','Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа с' +
+        ' целью изменения вида содержимого. Как правило, вид блока управляется с помощью стилей.',[
+        new Atribut('align','Задает выравнивание содержимого тега <div>.'),
+        new Atribut('title','Добавляет всплывающую подсказку к содержимому.')
+    ]),
     // -h1
-    // -span
-    // -input
-    // -form
-    // -option
-    // -select
+    new Tag('<h1>','HTML предлагает шесть заголовков разного уровня, которые показывают относительную важность секции,' +
+        ' расположенной после заголовка. ',[
+        new Atribut('align','Определяет выравнивание заголовка.')
+    ]),
+        // -span
+        new Tag('<span>','Тег <span> предназначен для определения строчных элементов документа. В отличие от блочных ' +
+            'элементов, таких как <table>, <p> или <div>, с помощью тега <span> можно выделить часть информации внутри д' +
+            'ругих тегов и установить для нее свой стиль.',[
+            new Atribut('class','Определяет имя класса, которое позволяет связать тег со стилевым оформлением.'),
+            new Atribut('hidden','Скрывает содержимое элемента от просмотра.')
+        ]),
+        // -input
+        new Tag('<input>','Тег <input> является одним из разносторонних элементов формы и позволяет создавать разн' +
+            'ые элементы интерфейса и обеспечить взаимодействие с пользователем.',[
+            new Atribut('accept','Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки ' +
+                'файлов.'),
+            new Atribut('border','Толщина рамки вокруг изображения.')
+        ]),
+        // -form
+        new Tag('<form>','Связывает поле с формой по её идентификатору. Такая связь необходима в случае, когда поле' +
+            ' располагается за пределами <form>, например, при создании её программно или по соображениям дизайна.',[
+        ]),
+        // -option
+        new Tag('<option>','Тег <option> определяет отдельные пункты списка, создаваемого с помощью контейнера <select>.' +
+            ' Ширина списка определяется самым широким текстом, указанным в теге <option>, а также может изменяться с ' +
+            'помощью стилей. ',[
+            new Atribut('disabled','Заблокировать для доступа элемент списка.'),
+            new Atribut('label','Указание метки пункта списка.')
+        ]),
+        // -select
+        new Tag('<select>','Тег <select> позволяет создать элемент интерфейса в виде раскрывающегося списка, а также сп' +
+            'исок с одним или множественным выбором, как показано далее. Конечный вид зависит от использования атрибута ' +
+            'size тега <select>, который устанавливает высоту списка. ',[
+            new Atribut('required','Список обязателен для выбора перед отправкой формы.'),
+            new Atribut('multiple','Позволяет одновременно выбирать сразу несколько элементов списка.')
+        ])
+    ]
+    console.log(tag)
+    for (tags of tag){
+        console.log(tags)
+    }
     // Приклад результуючого об'єкту
     // {
     //     titleOfTag: 'area',
