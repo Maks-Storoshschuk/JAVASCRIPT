@@ -59,14 +59,47 @@
     }
 
     // <!--    f) отримує всі елементи 'a' та додає їм клас anchor-->
+    for (let a of document.getElementsByTagName('a')){
+        a.classList.add('anchor');
+    }
 
     // <!--    g) отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому розмір тексту на 40 пікселів-->
+    for (let aSecond of document.getElementsByClassName('anchor')){
+        if( aSecond.textContent === 'link3' ){
+            aSecond.style.fontSize = '40px'
+        }
+    }
+
     // <!--    h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a-->
+    for (let aAgain of document.getElementsByTagName('a')){
+        aAgain.classList.add('element_'+aAgain.textContent)
+    }
+
     // <!--    i) отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()-->
+    let color = prompt('Select a color for sub-header')
+    for (let prompts of document.getElementsByClassName('sub-header')){
+        prompts.style.backgroundColor = color
+    }
+
     // <!--    j) отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment . Колір отримати з prompt()-->
+    for (let prompts2 of document.getElementsByClassName('sub-header')){
+        if( prompts2.textContent==='content 2 segment'){
+            prompts2.style.color = prompt('Select a color for content 2 segment')
+        }
+    }
     // <!--    k) отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()-->
+    for(let content_1 of document.getElementsByClassName('content_1')){
+        content_1 = content_1.innerText = prompt('somethig write')
+    }
+
     // <!--    l) отримати елементи p та змінити їм padding на 20px-->
+    for(let p of document.getElementsByTagName('p')){
+        p=p.style.padding = '20px'
+    }
     // <!--    m) отримати елементи з класом text2 та змінити їм текст на назву групи (mon-year)-->
+    for (let text2 of document.getElementsByClassName('text2')){
+        text2=text2.innerText = 'June 2021'
+    }
 
 </script>
 </body>
