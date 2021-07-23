@@ -12,13 +12,13 @@
     let spisok = document.getElementsByClassName('list')[0];
 
     for (let basketon of basket) {
-        let productDiv =document.createElement('div');
+        let product =document.createElement('div');
 
         let title = document.createElement('h1');
         title.innerText = basketon.name;
-        productDiv.appendChild(title);
+        product.appendChild(title);
     // document.write(`<div> ${basketon.name}</div>`)
-        spisok.appendChild(productDiv)
+        spisok.appendChild(product)
     }
 
 </script>
