@@ -19,7 +19,6 @@ btn.onclick = ()=>{
 }
 writeContent()
 
-
 // console.log(form);
 // form.onsubmit = function (restart){
 //     console.log(restart.target.username.value);
@@ -31,17 +30,67 @@ writeContent()
 //     let text = divka.innerText
 //     text.innerText = JSON.parse(localStorage.getItem(res))
 // }
-
-
 // На index2.html виводити записане в localstorage ім'я в div
 //
-//
-// - Імітуємо наповнення інтернет магазину товарами :
-//     Створити форму з наступними полями :
-//     - назва товару
-// - кількість товару
-// - ціна товару
-// - картинка товару (посилання з інтернету)
+let products = [{
+        name: 'Набір чорного чаю Akbar Fruit Fiesta, 2 г, 80 шт.',
+        number:1,
+        price:'199,00 грн',
+        img: "https://img.auchan.ua/rx/q_90,ofmt_webp/https://auchan.ua/media/catalog/product/5/0/5014176001537_91.jpg"
+    },
+    {
+        name: 'Чай зелений Shere Once Upon A Time',
+        number: 1,
+        price: '99,00 грн',
+        img: 'https://img.auchan.ua/rx/q_90,ofmt_webp/https://auchan.ua/media/catalog/product/4/7/4791014011545_67.jpg'
+    },
+    {
+        name: 'Чай чорний байховий дрібний з ароматом бергамоту Earl Grey Fantasy Greenfield к/у 50х2г',
+        number: 1,
+        price: '69,50 грн',
+        img: 'https://img.auchan.ua/rx/q_90,ofmt_webp/https://auchan.ua/media/catalog/product/4/8/4820209840124_252.jpg'
+
+    },
+    {
+        name: 'ще якийсь чай',
+        number: 1,
+        price: '54,50 грн',
+        img: 'https://img.auchan.ua/rx/q_90,ofmt_webp/https://auchan.ua/media/catalog/product/c/a/ca4b4b2548efabaf2cec13' +
+            'f1aa99c00ff9a99e0ac75eb151ddcac5e4a64694a3.jpeg'
+    }
+]
+
+let productsDiv = document.getElementsByClassName('shop')[0];
+
+let basket = JSON.parse(localStorage.getItem('basket'))|| [];
+for (let product of products) {
+
+    let productDiv =document.createElement('div');
+
+    let title = document.createElement('h1');
+    title.innerText = product.name;
+    productDiv.appendChild(title);
+
+    let image = document.createElement('img');
+    image.src = product.img;
+    image.style.width = '400px';
+    productDiv.appendChild(image);
+
+    let price = document.createElement('h4');
+    price.innerText = product.price;
+    productDiv.appendChild(price)
+
+    let baton = document.createElement('button');
+    baton.innerText = 'buy';
+    baton.onclick = function (){
+        basket.push(product)
+        localStorage.setItem('basket',JSON.stringify(basket))
+    }
+    productDiv.appendChild(baton);
+    productsDiv.appendChild(productDiv)
+}
+
+
 // Зберігати товари в масив в локалсорадж. При збережені товару з форми, action не повинно відбуватись.
 //     створити елемент <a href='list.html'> На сторінку товарів</a>, та list.html, при переході на який відобразити на сторінці всі товари.
 // На сторінці  list.html побудувати кнопку яка видаляє всі товари з корзини та локалстораджа.

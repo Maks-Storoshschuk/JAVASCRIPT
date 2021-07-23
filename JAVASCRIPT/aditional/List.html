@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="list"></div>
+<script>
+    let basket = JSON.parse(localStorage.getItem('basket'))|| [];
+
+    let spisok = document.getElementsByClassName('list')[0];
+
+    for (let basketon of basket) {
+        let productDiv =document.createElement('div');
+
+        let title = document.createElement('h1');
+        title.innerText = basketon.name;
+        productDiv.appendChild(title);
+    // document.write(`<div> ${basketon.name}</div>`)
+        spisok.appendChild(productDiv)
+    }
+
+</script>
+
+</body>
+</html>
