@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="info"></div>
+<div class="comentBox"></div>
+<script>
+    fetch('https://jsonplaceholder.typicode.com/comments')
+        .then(value => value.json())
+        .then(value => {
+            let info = document.getElementsByClassName('info')[0];
+            for (const infoElement of value) {
+                let div = document.createElement('div');
+                div.innerText = `${infoElement.id} ${infoElement.name}`
+                let baton = document.createElement('button')
+                baton.innerText = 'Читати коментар'
+                baton.style.backgroundColor = 'gray';
+                baton.onclick = function (){
+                    fetch(`https://jsonplaceholder.typicode.com/posts/${infoElement.id}/comments`)
+                        .then(value => value.json())
+                        .then(coments => {
+                            console.log(value)
+                        let comentBox = document.getElementsByClassName('comentBox')[0];
+                        comentBox.innerText = ' ';
+                        for (const coment of coments) {
+                            let comentDiv = document.createElement('div');
+                            comentDiv.innerText = coment.body;
+                            comentDiv.style.backgroundColor = 'green'
+                            comentBox.append(comentDiv);
+                        }
+                    })
+                }
+                div.append(baton)
+                info.append(div)
+
+            }
+        })
+
+    fetch('https://jsonplaceholder.typicode.com/posts/100/comments')
+        .then(value => {
+            value.json();
+
+            console.log(value);
+        })
+        .then(value => {
+            console.log(value);
+        })
+</script>
+
+</body>
+</html>
