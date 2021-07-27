@@ -1,4 +1,3 @@
-
 // 1.
 // Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті
 // https://jsonplaceholder.typicode.com/users
@@ -8,7 +7,7 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
     .then(value => value.json())
     .then(value => {
         let main = document.getElementsByClassName('main')[0];
-        for (let user of value){
+        for (let user of value) {
             let adblock = document.createElement('div');
             let users = `${user.id} ${user.name}`;
             let baton = document.createElement('button');
@@ -24,14 +23,14 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
                         posts.append(postBlock);
                         let baton2 = document.createElement('button');
                         baton2.innerText = 'читати коментарі цього штриха'
-                        posts.append(baton2)
-                        baton2.onclick = () =>{
+                        let comentar = document.createElement('div');
+                        posts.append(baton2, comentar)
+                        baton2.onclick = () => {
+                            comentar.innerHTML = ''
                             fetch(`https://jsonplaceholder.typicode.com/comments?postId=${user.id}`)
                                 .then(coments => coments.json())
                                 .then(coments => {
-                                    let comentar = document.createElement('div');
-                                    comentar.innerText = ' ';
-                                    for (let coment of coments){
+                                    for (let coment of coments) {
                                         let comentDiv = document.createElement('div')
                                         comentDiv.innerText = coment.body;
                                         comentar.append(comentDiv)
