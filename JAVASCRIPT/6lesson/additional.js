@@ -44,7 +44,6 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
                     })
             }
             adblock.append(users);
-            main.append(adblock)
-            main.append(baton);
+            main.append(baton, adblock);
         }
     })
