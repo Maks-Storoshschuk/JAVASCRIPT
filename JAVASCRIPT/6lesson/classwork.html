@@ -18,7 +18,7 @@
             let title = `Номер теми ${post.id}. Тема ${post.title}.`;
             let baton = document.createElement('button');
             baton.innerText = 'Коментарі користувача';
-            baton.onclick = () => {
+            baton.onclick =  ()=>{
                 fetch(`https://jsonplaceholder.typicode.com/comments?postId=${post.userId}`)
                 .then(value1 => value1.json())
                 .then(value1 => {
