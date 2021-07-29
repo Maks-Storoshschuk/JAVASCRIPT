@@ -38,7 +38,7 @@ function goToHome(){
 function fuckWife(){
     setTimeout(()=>{
         console.log('10) Трахати красуню дружину =D')
-    })
+    },2000)
 }
 function aweting(){
     setTimeout(()=>{
