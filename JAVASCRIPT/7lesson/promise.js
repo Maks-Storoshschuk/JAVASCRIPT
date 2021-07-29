@@ -1,59 +1,122 @@
 function aweting(){
-    return new Promise((resolve,reject)=>{
+    return new Promise((resolve)=>
         setTimeout(()=>{
-            console.log('1) Прокинутись');
+            resolve('1) Прокинутись');
         },1000)
-    })
+    )
 }
 function diner(){
-    setTimeout(()=>{
-        console.log('2) Поснідати');
-    },500)
+    return new Promise((resolve)=>
+        setTimeout(()=>{
+            resolve('2) Поснідати');
+        },500)
+    )
 }
 function wash(){
-    setTimeout(()=>{
-        console.log('3) Піти в душ');
-    },2000)
+    return new Promise((resolve)=>
+        setTimeout(() => {
+            resolve('3) Піти в душ');
+        }, 2000)
+    )
 }
 function repeat(){
-    setTimeout(()=>{
-        console.log('4) Повторити лекцію');
-    },300)
+    return new Promise((resolve)=>
+        setTimeout(() => {
+            resolve('4) Повторити лекцію');
+        }, 300)
+    )
+
 }
 function bag(){
-    setTimeout(()=>{
-        console.log('5) Скласти рюкзак');
-    },100)
+    return new Promise((resolve)=>
+        setTimeout(() => {
+            resolve('5) Скласти рюкзак');
+        }, 100)
+    )
 }
 function goOut(){
-    setTimeout(()=>{
-        console.log('6) Йти на трамвай');
-    },4000)
+    return new Promise((resolve)=>
+        setTimeout(() => {
+            resolve('6) Йти на трамвай');
+        }, 4000)
+    )
 }
 function listen(){
-    setTimeout(()=>{
-        console.log('7) Слухати лекцію');
-    },2000)
+    return new Promise((resolve)=>
+        setTimeout(() => {
+            resolve('7) Слухати лекцію');
+        }, 2000)
+    )
 }
 function practic(){
-    setTimeout(()=>{
-        console.log('8) Практикувати');
-    },400)
+    return new Promise((resolve)=>
+        setTimeout(() => {
+            resolve('8) Практикувати');
+        }, 400)
+    )
 }
 function goToHome(){
-    setTimeout(()=>{
-        console.log('9) Їхати додому');
-    },800)
+    return new Promise((resolve)=>
+        setTimeout(() => {
+            resolve('9) Їхати додому');
+        }, 800)
+    )
 }
 function fuckWife(){
-    setTimeout(()=>{
-        console.log('10) Трахати красуню дружину =D')
-    })
+    return new Promise((resolve)=>
+        setTimeout(() => {
+            resolve('10) Трахати красуню дружину =D')
+        }, 2000)
+    )
 }
 
 let baton = document.getElementById('start')
 baton.onclick = function (){
     aweting()
+        .then(value=>{
+            console.log(value)
+            return diner()
+        })
+        .then(value=>{
+            console.log(value)
+            return wash()
+        })
+        .then(value=>{
+            console.log(value)
+            return repeat()
+        })
+        .then(value=>{
+            console.log(value)
+            return bag()
+        })
+        .then(value=>{
+            console.log(value)
+            return goOut()
+        })
+        .then(value=>{
+            console.log(value)
+            return listen()
+        })
+        .then(value=>{
+            console.log(value)
+            return practic()
+        })
+        .then(value=>{
+            console.log(value)
+            return goToHome()
+        })
+        .then(value=>{
+            console.log(value)
+            return fuckWife()
+        })
+        .then(value => {
+            console.log(value)
+        })
+        .catch(()=>{
+            console.log('EROR')
+        })
+
+
 }
 
 
