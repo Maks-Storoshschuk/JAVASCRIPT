@@ -1,66 +1,87 @@
-
-function repeat(){
+function aweting(cb){
     setTimeout(()=>{
-        console.log('4) Повторити лекцію');
-        bag();
-    },300)
-}
-function bag(){
-    setTimeout(()=>{
-        console.log('5) Скласти рюкзак');
-        goOut();
-    },100)
-}
-function goOut(){
-    setTimeout(()=>{
-        console.log('6) Йти на трамвай');
-        listen();
-    },4000)
-}
-function listen(){
-    setTimeout(()=>{
-        console.log('7) Слухати лекцію');
-        practic();
-    },2000)
-}
-function practic(){
-    setTimeout(()=>{
-        console.log('8) Практикувати');
-        goToHome();
-    },400)
-}
-function goToHome(){
-    setTimeout(()=>{
-        console.log('9) Їхати додому');
-        fuckWife();
-    },800)
-}
-function fuckWife(){
-    setTimeout(()=>{
-        console.log('10) Трахати красуню дружину =D')
-    },2000)
-}
-function aweting(){
-    setTimeout(()=>{
-        console.log('1) Прокинутись');
-        diner();
+        cb('1) Прокинутись');
     },1000)
 }
-function diner(){
+function diner(cb){
     setTimeout(()=>{
-        console.log('2) Поснідати');
-        wash();
+        cb('2) Поснідати');
     },500)
 }
-function wash(){
+function wash(cb){
     setTimeout(()=>{
-        console.log('3) Піти в душ');
-        repeat();
+        cb('3) Піти в душ');
     },2000)
 }
+function repeat(cb){
+    setTimeout(()=>{
+        cb('4) Повторити лекцію');
+    },300)
+}
+function bag(cb){
+    setTimeout(()=>{
+        cb('5) Скласти рюкзак');
+    },100)
+}
+function goOut(cb){
+    setTimeout(()=>{
+        cb('6) Йти на трамвай');
+    },4000)
+}
+function listen(cb){
+    setTimeout(()=>{
+        cb('7) Слухати лекцію');
+    },2000)
+}
+function practic(cb){
+    setTimeout(()=>{
+        cb('8) Практикувати');
+    },400)
+}
+function goToHome(cb){
+    setTimeout(()=>{
+        cb('9) Їхати додому');
+    },800)
+}
+function fuckWife(cb){
+    setTimeout(()=>{
+        cb('10) Трахати красуню дружину =D')
+    },2000)
+}
+
 let baton = document.getElementById('start')
 baton.onclick = function (){
-    aweting()
+    aweting((data)=>{
+        console.log(data)
+        diner((data)=>{
+            console.log(data)
+            wash((data)=>{
+                console.log(data)
+                repeat((data)=>{
+                    console.log(data)
+                    bag((data)=>{
+                        console.log(data)
+                        goOut((data)=>{
+                            console.log(data)
+                            listen((data)=>{
+                                console.log(data)
+                                practic((data)=>{
+                                    console.log(data)
+                                    goToHome((data)=>{
+                                        console.log(data)
+                                        fuckWife((data)=>{
+                                            console.log(data)
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
+
+            })
+        })
+    })
 }
 
 
