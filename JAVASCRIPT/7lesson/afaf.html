@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function first(number,callback){
+        if (number <= 0){
+            console.log('Error');
+            callback("the end",null)
+        }
+        else console.log('all okay, do next step');
+            callback(null,'next')
+    }
+    first(0,(err,data)=>{
+      if (err){
+          console.log(err)
+      }
+      else {
+          console.log(data)
+      }
+    })
+</script>
+
+</body>
+</html>
