@@ -89,7 +89,7 @@ body > div.block > div> div:nth-child(1){
 }
 .comments>div{
     width: 22%;
-    height: 180px;
+    height: 200px;
     background-color: #b3d4fc;
     border: 1px  solid black;
     border-radius: 5px;
