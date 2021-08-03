@@ -24,7 +24,7 @@ baton.onclick = function (){
                     let baTon = document.createElement('button');
                     let a = document.createElement('a');
                     a.innerText = 'Відкрити';
-                    a.href = `post-details.html?user=${JSON.stringify(user)}`;
+                    a.href = `post-details.html?post=${JSON.stringify(user)}`;
                     baTon.append(a)
                     div.innerText = user.title
                     div.append(baTon)
